@@ -1,53 +1,45 @@
 import RegisterPage from "../pages/registerPage";
-import BankAccountPage from "../pages/bankAccountPage"
+import BankAccountPage from "../pages/bankAccountPage";
 
-const registerPage = new RegisterPage()
-const bankAccountPage = new BankAccountPage()
+const registerPage = new RegisterPage();
+const bankAccountPage = new BankAccountPage();
 
-describe('Bank Account', () => {
-  it('Should allow the user to create a bank account after first login', () => {
-    
-    const username = `YanW_${Date.now()}`
+describe("Bank Account", () => {
+  it("Should allow the user to create a bank account after first login", () => {
+    const username = `YanW_${Date.now()}`;
 
-    registerPage.acessLoginPage()
-    registerPage.acessSignupPage()
+    registerPage.acessLoginPage();
+    registerPage.acessSignupPage();
 
-    registerPage.registerNewUser('Yan', 'Wilson', username , 's3cret')
-   
-    cy.url().should('include', '/signin')
-    registerPage.loginWithUser( username , 's3cret')
-    
-    bankAccountPage.nextButtonClick()
-    cy.contains('Create Bank Account').should('be.visible')
+    registerPage.registerNewUser("Yan", "Wilson", username, "s3cret");
 
-    bankAccountPage.createBankAccount('Charleston Bank', '125634896', '872726163517')
-    bankAccountPage.accountVerified()
+    cy.url().should("include", "/signin");
+    registerPage.loginWithUser(username, "s3cret");
 
-    cy.contains('Logout').should('be.visible')
-    
+    bankAccountPage.nextButtonClick();
+    cy.contains("Create Bank Account").should("be.visible");
 
-  })
+    bankAccountPage.createBankAccount("Charleston Bank", "125634896", "872726163517");
+    bankAccountPage.accountVerified();
 
-  it('Should show error when submitting bank account form empty', () => { 
-    
-    const username = `YanW_${Date.now()}`
+    cy.contains("Logout").should("be.visible");
+  });
 
-    registerPage.acessLoginPage()
-    registerPage.acessSignupPage()
+  it("Should show error when submitting bank account form empty", () => {
+    const username = `YanW_${Date.now()}`;
 
-    registerPage.registerNewUser('Yan', 'Wilson', username , 's3cret')
-   
-    cy.url().should('include', '/signin')
-    registerPage.loginWithUser( username , 's3cret')
-    
-    bankAccountPage.nextButtonClick()
-    cy.contains('Create Bank Account').should('be.visible')
-    
-    bankAccountPage.submitEmptyForm()
-    bankAccountPage.checkBankNameErrorVisible()
-    
+    registerPage.acessLoginPage();
+    registerPage.acessSignupPage();
 
-  })
+    registerPage.registerNewUser("Yan", "Wilson", username, "s3cret");
 
+    cy.url().should("include", "/signin");
+    registerPage.loginWithUser(username, "s3cret");
 
-})
+    bankAccountPage.nextButtonClick();
+    cy.contains("Create Bank Account").should("be.visible");
+
+    bankAccountPage.submitEmptyForm();
+    bankAccountPage.checkBankNameErrorVisible();
+  });
+});
