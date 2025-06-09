@@ -1,6 +1,6 @@
 # Cypress Real World App - QA Tests
 
-This project contains automated tests developed with [Cypress] based on the [Cypress Real World App](https://github.com/cypress-io/cypress-realworld-app) project.
+This project contains automated tests developed with Cypress based on the [Cypress Real World App](https://github.com/cypress-io/cypress-realworld-app) project.
 
 ⚠️ I did not create the original application — only the automated tests.
 
