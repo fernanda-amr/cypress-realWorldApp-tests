@@ -22,7 +22,7 @@ describe("Transaction Histoty", () => {
   });
 
   it("Should show a message if there are no transactions", () => {
-    cy.request("POST", "http://localhost:3003/users", newUser);
+    cy.request("POST", "http://localhost:3001/users", newUser);
 
     loginPage.accessLoginPage();
     loginPage.loginWithUser(newUser.username, newUser.password);
