@@ -15,15 +15,18 @@ This project contains automated tests developed with [Cypress] based on the [Cyp
 2. Install dependencies:
    ```bash
    yarn install
+   ```
    
 
 3. Run the application:
   ```bash
 yarn dev
+  ```
 
 4. Run Cypress tests:
   ```bash
 yarn cypress:open 
+  ```
 
 🛠 Notes
 Ensure ncp is installed:
