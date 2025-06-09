@@ -118,6 +118,17 @@
       "balance": 0,
       "createdAt": "2025-06-09T18:06:53.470Z",
       "modifiedAt": "2025-06-09T18:06:53.470Z"
+    },
+    {
+      "id": "qFwNaHD7x",
+      "uuid": "c48f374b-5e34-45de-8c40-fe5585d76975",
+      "firstName": "Amanda",
+      "lastName": "Gyger",
+      "username": "Amanda_G",
+      "password": "$2a$10$Q897hSYDFXNYHSkZsU8SwOfx8V5ihas7DFlk5jCxhtf8CA36rOAw6",
+      "balance": 0,
+      "createdAt": "2025-06-09T20:51:05.424Z",
+      "modifiedAt": "2025-06-09T20:51:05.424Z"
     }
   ],
   "contacts": [

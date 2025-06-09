@@ -1,3 +1,46 @@
+# Cypress Real World App - QA Tests
+
+This project contains automated tests developed with [Cypress] based on the [Cypress Real World App](https://github.com/cypress-io/cypress-realworld-app) project.
+
+⚠️ I did not create the original application — only the automated tests.
+
+## 📁 Project Structure
+
+- All test files are located in the `cypress/tests` folder.
+- The rest of the application was cloned from the original repository above.
+
+## Getting Started
+
+1. Clone this repository  
+2. Install dependencies:
+   ```bash
+   yarn install
+   
+
+3. Run the application:
+  ```bash
+yarn dev
+
+4. Run Cypress tests:
+  ```bash
+yarn cypress:open 
+
+🛠 Notes
+Ensure ncp is installed:
+  ```bash
+yarn add ncp --dev
+```
+Otherwise, you may get a command not found error during startup.
+
+If you face port issues, you can update the .env file:
+  ```bash
+PORT=3000
+VITE_BACKEND_PORT=3001
+```
+
+
+
+
 <p align="center">
   <!-- We use two SVGs here so that this displays correctly
     on Github. This might not look right in other Markdown previewers. -->
