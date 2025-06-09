@@ -13,9 +13,9 @@ This project contains automated tests developed with Cypress based on the [Cypre
 
 1. Clone this repository  
 2. Install dependencies:
-   ```bash
-   yarn install
-   ```
+ ```bash
+ yarn install
+ ```
    
 
 3. Run the application:
